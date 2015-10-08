@@ -1,38 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="style.css" media="all" rel="stylesheet" />
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" ></script>
-<script type="text/javascript">
-	$(function() {
-	    init();
-	});
-	function init() {
-		$.get('/api/classes', function(classes) {
-            for (var i = 0; i < classes.length; i++) {
-            	addClass(classes[i]);
-            }
-        });
-	};
-	function addClass(item) {
-		$('#content').append('<tr id=' + item.id + 
-			'><td><input type="checkbox"></td><td>' + 
-			item.sName + '</td></tr>'
-		);
-	}
-</script>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel='stylesheet' href='webjars/bootstrap/3.1.0/css/bootstrap.min.css'>
 </head>
 <body>
-	<h1 class="h-title">Builder</h1>
-	<table class="top-table" id="content">
-		<thead>
-			<tr>
-				<th width="10"></th>
-				<th width="300">Class name</th>
-			</tr>
-		</thead>
-	</table>
+	<div id="app"></div>
+	<script type='text/javascript' src='webjars/react/0.13.3/react.js'></script>
+	<script type='text/javascript' src='webjars/react/0.13.3/JSXTransformer.js'></script>
 </body>
 </html>
